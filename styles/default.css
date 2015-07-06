@@ -121,3 +121,6 @@ body {
 .footer-link{
     color: #333;
 }
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+    background: #028482;
+}
