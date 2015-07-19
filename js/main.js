@@ -6,4 +6,17 @@ $(document).ready(function () {
         $('.row-offcanvas').toggleClass('active')
     });
     $('#noty').html($('#offers').children('a').length);
+    //Contact form
+    $('#contactForm').submit(function (event) {
+        event.preventDefault();
+        var form = $(this);
+        $.ajax({
+            method:'POST',
+            url:'mail.php',
+            data:form.serialize(),
+            success:function(response){
+                alert('Message successfully Sent, Thank You!');
+            }
+        })
+    })
 });
