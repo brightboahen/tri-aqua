@@ -5,5 +5,5 @@ $(document).ready(function () {
     $('[data-toggle="offcanvas"]').click(function () {
         $('.row-offcanvas').toggleClass('active')
     });
-    $('#noty').html($('#offers').children('li').length);
+    $('#noty').html($('#offers').children('a').length);
 });
