@@ -18,5 +18,9 @@ $(document).ready(function () {
                 alert('Message successfully Sent, Thank You!');
             }
         })
-    })
+    });
+    //$('.get-quote').click(function (evt) {
+    //    evt.preventDefault();
+    //    $('#contactForm').submit();
+    //});
 });
