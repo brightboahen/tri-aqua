@@ -4,9 +4,9 @@ if(isset($_POST['customerName'])) {
     $email_to = "bob@triaquacleaning.co.uk".",";
     $email_subject =$_POST['subject'];
 
-    $first_name = $_POST['customerName']; // required
-    $email_from = $_POST['customerEmail']; // required
-    $comments =$_POST['enquiry'];
+    $first_name = $_POST['customerName']."\r\n"; // required
+    $email_from = $_POST['customerEmail']."\r\n"; // required
+    $comments =$_POST['enquiry']."\r\n";
     $comments .= "\r\n".$_POST['message']; // required
     $email_message = $comments;
 //    //$options = $_POST['userSubject'];
