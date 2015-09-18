@@ -15,7 +15,30 @@ $(document).ready(function () {
             url:'mail.php',
             data:form.serialize(),
             success:function(response){
-                alert('Message successfully Sent, Thank You!');
+                if(response === 'true'){
+                    alert("Form successfully submitted, Thank you!");
+                    window.location.href = "index.html";
+                }else{
+                    alert("There was an error during submission please try again");
+                }
+            }
+        })
+    });
+    //Quote form
+    $('#quoteBtn').click(function (event) {
+        event.preventDefault();
+        var form = $("#quoteForm");
+        $.ajax({
+            method:'POST',
+            url:'mail.php',
+            data:form.serialize(),
+            success:function(response){
+                if(response === 'true'){
+                    alert("Form successfully submitted, Thank you!");
+                    window.location.href = "index.html";
+                }else{
+                    alert("There was an error during submission please try again");
+                }
             }
         })
     });
