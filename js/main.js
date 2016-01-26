@@ -28,19 +28,23 @@ $(document).ready(function () {
     $('#quoteBtn').click(function (event) {
         event.preventDefault();
         var form = $("#quoteForm");
-        $.ajax({
-            method:'POST',
-            url:'mail.php',
-            data:form.serialize(),
-            success:function(response){
-                if(response === 'true'){
-                    alert("Form successfully submitted, Thank you!");
-                    window.location.href = "index.html";
-                }else{
-                    alert("There was an error during submission please try again");
+        if(form[0].elements[0].value !=='' && form[0].elements[2].value !==''){
+            $.ajax({
+                method:'POST',
+                url:'mail.php',
+                data:form.serialize(),
+                success:function(response){
+                    if(response === 'true'){
+                        alert("Form successfully submitted, Thank you!");
+                        window.location.href = "index.html";
+                    }else{
+                        alert("There was an error during submission please try again");
+                    }
                 }
-            }
-        })
+            });
+        }else{
+            alert('Please fill out your name and phone number');
+        }
     });
     //$('.get-quote').click(function (evt) {
     //    evt.preventDefault();
