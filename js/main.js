@@ -17,7 +17,7 @@ $(document).ready(function () {
             success:function(response){
                 if(response === 'true'){
                     alert("Form successfully submitted, Thank you!");
-                    window.location.href = "index.html";
+                    window.location.href = "../index1.html";
                 }else{
                     alert("There was an error during submission please try again");
                 }
@@ -36,7 +36,7 @@ $(document).ready(function () {
                 success:function(response){
                     if(response === 'true'){
                         alert("Form successfully submitted, Thank you!");
-                        window.location.href = "index.html";
+                        window.location.href = "../index1.html";
                     }else{
                         alert("There was an error during submission please try again");
                     }
