@@ -50,4 +50,8 @@ $(document).ready(function () {
     //    evt.preventDefault();
     //    $('#contactForm').submit();
     //});
+    var toRedirect = 'carpet_cleaning.html';
+    if(document.location.href.split('/').indexOf(toRedirect)!== -1){
+        document.location.href='carpet_upholstery.html';
+    }
 });
